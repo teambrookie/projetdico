@@ -1,5 +1,6 @@
 import javax.swing.JPanel;
 import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileFilter;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import java.awt.*;
@@ -34,6 +35,8 @@ public class OngletImportExport extends JPanel implements ActionListener{
 	}
 	
 	public void takeFile(JFileChooser dial) throws IOException{
+		FileFilter txt = new FiltreTXT();
+		dial.addChoosableFileFilter(txt);
 		if(dial.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
 			fichier = dial.getSelectedFile();
 			sortie = new PrintWriter(new FileWriter(fichier.getPath(),true));
