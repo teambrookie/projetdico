@@ -13,7 +13,7 @@ public class Fenetre extends JFrame{
 		onglet.addTab("Accueil",new JButton(""));
 		onglet.addTab("Traduction",new JButton(""));
 		onglet.addTab("Import/Export",new OngletImportExport());
-		onglet.addTab("Ajouter/Supprimer",new JButton(""));
+		onglet.addTab("Ajouter/Supprimer",new OngletAjoutSupprimer());
 		onglet.addTab("Index",new JButton(""));
 		this.setContentPane(onglet);
 		
