@@ -6,8 +6,7 @@ public class Fenetre extends JFrame{
 	
 	public Fenetre(){
 		setVisible(true);
-		setSize(450,450);
-		setLocationRelativeTo(null);
+		
 		JTabbedPane onglet = new JTabbedPane();
 		JTabbedPane ongletTraduire = new JTabbedPane();
 		onglet.addTab("Accueil",new JButton(""));
@@ -18,6 +17,8 @@ public class Fenetre extends JFrame{
 		onglet.addTab("Ajouter/Supprimer",new OngletAjoutSupprimer());
 		onglet.addTab("Index",new JButton(""));
 		this.setContentPane(onglet);
+		this.pack();
+		setLocationRelativeTo(null);
 		
 	}
 	
