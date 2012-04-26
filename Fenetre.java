@@ -9,7 +9,7 @@ public class Fenetre extends JFrame{
 		
 		JTabbedPane onglet = new JTabbedPane();
 		JTabbedPane ongletTraduire = new JTabbedPane();
-		onglet.addTab("Accueil",new JButton(""));
+		onglet.addTab("Accueil",new OngletAccueil());
 		onglet.addTab("Traduction",ongletTraduire);
 		ongletTraduire.addTab("Francais --> Anglais",new JButton(""));
 		ongletTraduire.addTab("Anglais --> Francais",new JButton(""));

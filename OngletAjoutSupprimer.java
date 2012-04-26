@@ -13,22 +13,22 @@ public class OngletAjoutSupprimer extends JPanel{
 	public OngletAjoutSupprimer(){
 		
 		
-		/**####################################################
-		 * #          										  #
-		 * #		PARTIE AJOUT D'UN NOUVEAU MOT			  #
-		 * #												  #
-		 * ####################################################
+		/**######################################################
+		 * #													#
+		 * #		PARTIE AJOUT D'UN NOUVEAU MOT				#
+		 * #													#
+		 * ######################################################
 		 **/
 		 
 		// On instancie nos variables
 		panelAjout = new JPanel();
 		
-		drapeauFR = new JLabel( new ImageIcon("france.png"));
-		drapeauEN = new JLabel( new ImageIcon("ru.png"));
+		drapeauFR = new JLabel( new ImageIcon("img/france.png"));
+		drapeauEN = new JLabel( new ImageIcon("img/ru.png"));
 		introAjout = new JLabel("Ajouter vos entrées ici");
 			
 		tfFR = new JTextField(15); 
-		tfEN = new JTextField(15); 
+		tfEN = new JTextField(15);
 		
 		valider = new JButton("Valider");
 		reset = new JButton("Effacer");
@@ -48,18 +48,18 @@ public class OngletAjoutSupprimer extends JPanel{
 		this.add(introAjout);
 		this.add(panelAjout);	
 		
-		/**####################################################
-		 * #          										  #
-		 * #		  PARTIE SUPPRESSION D'UN MOT			  #
-		 * #												  #
-		 * ####################################################
+		/**######################################################
+		 * #													#
+		 * #		  PARTIE SUPPRESSION D'UN MOT				#
+		 * #													#
+		 * ######################################################
 		 **/	
 		 
 		 // On instancie nos variables
 		 
 		 panelSuppression = new JPanel();
 		 
-		 loupe = new JLabel( new ImageIcon("loupe.png"));
+		 loupe = new JLabel( new ImageIcon("img/loupe.png"));
 		 introSuppression = new JLabel("Recherchez le mot à supprimer");
 		 
 		 tfSearch = new JTextField(15);
