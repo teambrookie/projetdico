@@ -37,7 +37,13 @@ public class Mot implements Comparable<Mot> {
 	}
 	
 	public String toString(){
-		return "[ Fr : "+motFr+"| En : "+motEn+" ]";
+		if(modeFrToEn){
+			return "[ Fr : "+motFr+"| En : "+motEn+" ]";
+		}
+		else{
+			return "[ En : "+motEn+"| Fr : "+motFr+" ]";
+		}
+		
 	}
 
 }

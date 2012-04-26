@@ -5,8 +5,17 @@ public class Dico {
 	protected ArbreBinaireOrdonneChaine<Mot> arbreDico = new ArbreBinaireOrdonneChaine<Mot>();
 	
 	public Dico(){
+		enrichirDico("dictionnaires/default.dico");
+	}
+	
+	public Dico(String filename){
+		enrichirDico(filename);
+	}
+		
+	
+	public void enrichirDico(String filename){
 		try{
-			BufferedReader in = new BufferedReader(new FileReader("dictionnaires/default.dico"));
+			BufferedReader in = new BufferedReader(new FileReader(filename));
 			while(in.ready()){
 				String[] motsLigne = in.readLine().split(";");
 				arbreDico.ajouter(new Mot(motsLigne[0],motsLigne[1]));
@@ -28,8 +37,16 @@ public class Dico {
 			System.exit(3);
 		}
 		
+	}
+	
+	public void sauvegarderDico(String filename){
 		
 	}
+	
+	public Mot rechercheExacte(String mot){
+	}
+	
+	
 	
 	public String toString(){
 		return arbreDico.toString();
