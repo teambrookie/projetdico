@@ -43,7 +43,6 @@ public class ArbreBinaireOrdonneChaine<E> implements ArbreBinaireOrdonne<E> {
 	}
 	
 	
-	
 	public String toString(){
 		return abr.toString();
 	}
@@ -80,5 +79,6 @@ public class ArbreBinaireOrdonneChaine<E> implements ArbreBinaireOrdonne<E> {
 		return p;
 	}
 			
+	
 	
 }
