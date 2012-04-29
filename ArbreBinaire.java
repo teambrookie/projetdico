@@ -9,4 +9,5 @@ public interface ArbreBinaire<N> {
 	public ArbreBinaire<N> créerMiroir();
 	public void changerSad(ArbreBinaire<N> a);
 	public void changerSag(ArbreBinaire<N> a);
+	public void changerValeur(N valeur);
 }

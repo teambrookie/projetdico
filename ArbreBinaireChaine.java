@@ -50,6 +50,10 @@ public class ArbreBinaireChaine<N> implements ArbreBinaire<N> {
 		this.sad=a;
 	}
 	
+	public void changerValeur(N valeur){
+		this.val=valeur;
+	}
+	
 	public void écrireArbre() throws ArbreBinaireVideException{
 		
 		écrireArbre(this,"");

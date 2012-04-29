@@ -94,6 +94,12 @@ public class Dico {
 	}
 	
 	
+	public void modifierTraduction(String terme,String traduction) throws ArbreBinaireVideException, RechercheInfructueuseException{
+		Mot m = new Mot(terme,traduction);
+		ArbreBinaire<Mot> res = arbreDico.ajouter(m);
+		res.valeur().changerMotEn(newTraduction);
+	}
+	
 	public String toString(){
 		return arbreDico.toString();
 	}
@@ -102,7 +108,8 @@ public class Dico {
 	public static void main(String[] args)throws FileNotFoundException,IOException,ArbreBinaireVideException,RechercheInfructueuseException{
 		Dico d = new Dico();
 		d.ajouterMot("Libre","free");
-		System.out.println(d.rechercheRegExp(".*exp.*"));
+		d.modifierTraduction("Libre","craquotte");
+		System.out.println(d);
 	}
 	
 }
