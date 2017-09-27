@@ -93,11 +93,15 @@ public class Dico {
 		arbreDico.ajouter(new Mot(motFr,motEn));
 	}
 	
+	public void supprimerMot(String terme) throws ArbreBinaireVideException{
+		arbreDico.supprimer(new Mot(terme,""));
+	}
+	
 	
 	public void modifierTraduction(String terme,String traduction) throws ArbreBinaireVideException, RechercheInfructueuseException{
 		Mot m = new Mot(terme,traduction);
 		ArbreBinaire<Mot> res = arbreDico.ajouter(m);
-		res.valeur().changerMotEn(newTraduction);
+		res.valeur().changerMotEn(traduction);
 	}
 	
 	public String toString(){
@@ -109,6 +113,7 @@ public class Dico {
 		Dico d = new Dico();
 		d.ajouterMot("Libre","free");
 		d.modifierTraduction("Libre","craquotte");
+		d.supprimerMot("m");
 		System.out.println(d);
 	}
 	

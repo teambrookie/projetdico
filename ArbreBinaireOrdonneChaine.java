@@ -79,6 +79,48 @@ public class ArbreBinaireOrdonneChaine<E> implements ArbreBinaireOrdonne<E> {
 		return p;
 	}
 			
+	public void supprimer(E e) throws ArbreBinaireVideException{
+		supprimer(abr,e);
+	}
 	
+	private ArbreBinaire<E> supprimer(ArbreBinaire<E> a,E e) throws ArbreBinaireVideException{
+		if(abr.estVide()){
+			throw new ArbreBinaireVideException();
+		}
+		if(((Comparable)e).compareTo(a.valeur()) < 0){
+			a.changerSag(supprimer(a.sag(),e));
+		}
+		else{
+			if(((Comparable)e).compareTo(a.valeur()) > 0 ){
+				a.changerSad(supprimer(a.sad(),e));
+			}
+			else{
+				if(a.sad().estVide()){
+					a=a.sag();
+				}
+				else{
+					if(a.sag().estVide()){
+						a=a.sad();
+					}
+					else {
+						a.changerSag(suppmax(a.sag(),a.valeur()));
+					}
+				}
+			}
+		}
+		return a;
+	}
+	
+	private ArbreBinaire<E> suppmax(ArbreBinaire<E> a , E n) throws ArbreBinaireVideException{
+		if(a.sad().estVide()){
+			a.changerSad(suppmax(a.sad(),n));
+			return a;
+		}
+		else {
+			n=a.valeur();
+			return a.sag();
+		}
+	}
+			
 	
 }
